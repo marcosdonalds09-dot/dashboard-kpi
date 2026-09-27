@@ -60,6 +60,9 @@ td:first-child{text-align:left;font-weight:700;color:#4a9eff}tr:hover td{backgro
 .ord-btn:hover{border-color:#4a9eff;color:#4a9eff}.ord-btn.on{background:#1a3a5c;color:#4a9eff;border-color:#4a9eff}
 @media(max-width:960px){.layout{display:block}.side{width:auto;border:0;border-bottom:1px solid #2a2a2a}.s-graf{grid-template-columns:1fr!important}.kgrid{grid-template-columns:1fr 1fr}}
 .acoes{display:flex;gap:8px}
+.btn-top{display:inline-flex;align-items:center;gap:7px}.ico{display:inline-flex;align-items:center;gap:1px}.ico svg{width:18px;height:18px}
+.i-sol{color:#fbbf24}.i-lua{color:#c4b5fd}.barra{opacity:.55;font-weight:400;margin:0 1px}body.claro .i-lua{color:#6d28d9}
+.selos{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:6px}.selos .atu{margin-top:0}.selos .atu.val{margin-left:0}
 .atu.val{margin-left:6px;color:#fbbf24;background:rgba(245,158,11,.12);border-color:rgba(245,158,11,.45)}.atu.val b{color:#fcd34d}
 .exp{max-width:560px;margin:70px auto;padding:34px 30px;text-align:center;background:#111;border:2px solid #f59e0b;border-top:10px solid #f59e0b;border-radius:10px}
 .exp h2{font-size:28px;color:#fbbf24;margin-bottom:14px}.exp p{font-size:17px;color:#ccc;line-height:1.6}.exp b{color:#fff}
@@ -88,7 +91,7 @@ body.claro .ord-btn{background:#fff;color:#555;border-color:#ccc}body.claro .ord
  .marca{flex-wrap:wrap;gap:8px}.mclogo{height:34px}.hlogo{height:40px}.sep{height:34px}
  .top h1{font-size:26px}.top small{font-size:12px}
  .atu{font-size:12px;padding:3px 8px;margin-top:5px}.atu.val{margin-left:0}
- .acoes{width:100%}.acoes .btn-top{flex:1;padding:10px 8px;font-size:14px}
+ .selos .acoes{gap:6px}.btn-top .txt{display:none}.acoes .btn-top{padding:6px 9px}.ico svg{width:20px;height:20px}
  .periodo{font-size:16px;padding:8px 12px}.pbar{font-size:15px}.main{padding:8px}
  .kgrid{grid-template-columns:1fr 1fr!important;gap:8px}.kc{padding:10px;border-top-width:7px}
  .kc .kt{font-size:11px;min-height:28px}.kc .kv{font-size:24px}.kc .km{font-size:11px}.kc .kag{font-size:9px}
@@ -107,11 +110,16 @@ body.claro .ord-btn{background:#fff;color:#555;border-color:#ccc}body.claro .ord
 <img class='mclogo' src='https://raw.githubusercontent.com/marcosdonalds09-dot/dashboard-saidas-limpo/main/logo.png' alt='McDonalds'>
 <span class='sep'></span>
 <img class='hlogo' src='https://raw.githubusercontent.com/marcosdonalds09-dot/dashboard-saidas-limpo/main/cabecalho.png' alt='Big Foods'>
-<div><h1>Dashboard KPI</h1><small>Big Foods &bull; Indicadores Operacionais &bull; Dashboard gerado em 27/09/2026 13:40</small>
+<div><h1>Dashboard KPI</h1><small>Big Foods &bull; Indicadores Operacionais &bull; Dashboard gerado em 27/09/2026 14:14</small>
+<div class='selos'>
 <div class='atu'>&#128197; Base de dados atualizada em <b>26/09/2026 19:43</b></div>
 <div class='atu val' id='selVal' style='display:none'></div>
 </div>
-</div><div class='acoes'><button class='btn-top' id='btnTema' onclick='trocaTema()'>&#11036; Fundo branco</button><button class='btn-top' onclick='imprimir()'>&#128424; Imprimir</button></div></header>
+</div>
+</div><div class='acoes'>
+<button class='btn-top' id='btnTema' onclick='trocaTema()' title='Fundo branco / fundo preto'><span class='ico'><svg class='i-sol' viewBox='0 0 24 24'><circle cx='12' cy='12' r='4.5' fill='currentColor'/><g stroke='currentColor' stroke-width='2' stroke-linecap='round'><line x1='12' y1='1.5' x2='12' y2='3.5'/><line x1='12' y1='20.5' x2='12' y2='22.5'/><line x1='1.5' y1='12' x2='3.5' y2='12'/><line x1='20.5' y1='12' x2='22.5' y2='12'/><line x1='4.6' y1='4.6' x2='6' y2='6'/><line x1='18' y1='18' x2='19.4' y2='19.4'/><line x1='4.6' y1='19.4' x2='6' y2='18'/><line x1='18' y1='6' x2='19.4' y2='4.6'/></g></svg><span class='barra'>/</span><svg class='i-lua' viewBox='0 0 24 24'><path fill='currentColor' d='M20 15.5A9 9 0 1 1 8.5 4A7 7 0 0 0 20 15.5Z'/></svg></span><span class='txt' id='tTema'>Fundo branco</span></button>
+<button class='btn-top' onclick='imprimir()' title='Imprimir'><span class='ico'><svg class='i-imp' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linejoin='round'><polyline points='6 9 6 2 18 2 18 9'/><path d='M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2'/><rect x='6' y='14' width='12' height='8'/></svg></span><span class='txt'>Imprimir</span></button>
+</div></header>
 <div class='periodo' id='pSel'>Todos os registros</div>
 <div class='layout'>
 <aside class='side'><h2>&#9660; Filtros</h2>
@@ -260,7 +268,7 @@ function desenhaG(i){
     mkChart(cId,'bar',rot,[{label:perT,data:sorted.map(x=>x.v),backgroundColor:sorted.map(x=>corH(ating(x.v,kObj.m,kObj.s),hm,x.v)),borderRadius:4,order:1}].concat(tLine),{plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>lblT(ctx)||(multiMes?perT+': ':'')+fmtV(ctx.raw,kObj.f)}}},scales:{x:{grid:{color:TH.grid},ticks:{color:TH.tx,font:{size:9}}},y:{grid:{color:TH.grid},ticks:{color:TH.ty,callback:v=>fmtV(v,kObj.f)}}}});
   }
 }
-function aplicaTema(c){document.body.classList.toggle('claro',c);TH=c?TEMAS.claro:TEMAS.escuro;document.getElementById('btnTema').innerHTML=c?'&#11035; Fundo preto':'&#11036; Fundo branco';}
+function aplicaTema(c){document.body.classList.toggle('claro',c);TH=c?TEMAS.claro:TEMAS.escuro;document.getElementById('tTema').textContent=c?'Fundo preto':'Fundo branco';}
 function trocaTema(){const c=!document.body.classList.contains('claro');aplicaTema(c);try{localStorage.setItem('kpiTema',c?'claro':'escuro');}catch(e){}render();}
 function imprimir(){Object.values(CH).forEach(c=>c.resize());setTimeout(()=>window.print(),300);}
 window.addEventListener('beforeprint',()=>Object.values(CH).forEach(c=>c.resize()));
@@ -310,6 +318,8 @@ function limpar(){segAt=null;ords={};modos={};tends={};document.getElementById('
 Chart.defaults.font.family='Segoe UI,Arial,sans-serif';Chart.defaults.font.size=10;
 try{if(localStorage.getItem('kpiTema')==='claro')aplicaTema(true);}catch(e){}
 function dataBR(iso){const p=iso.split('-');return p[2]+'/'+p[1]+'/'+p[0];}
+function posAcoes(){const a=document.querySelector('.acoes'),s=document.querySelector('.selos'),t=document.querySelector('.top');if(!a||!s||!t)return;if(window.matchMedia('(max-width:760px)').matches){if(a.parentElement!==s)s.appendChild(a);}else if(a.parentElement!==t){t.appendChild(a);}}
+posAcoes();window.addEventListener('resize',posAcoes);
 const PUBLICADO=location.protocol!=='file:';
 const EXPIRADO=PUBLICADO&&VALIDADE&&new Date()>new Date(VALIDADE+'T23:59:59');
 if(EXPIRADO){
